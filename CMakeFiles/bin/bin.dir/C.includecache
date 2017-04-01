@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zilong/WorkSpace/cmake/include/a.h
+math.h
+-
+
+/home/zilong/WorkSpace/cmake/src/a.c
+stdlib.h
+-
+../include/a.h
+/home/zilong/WorkSpace/cmake/include/a.h
+
+/home/zilong/WorkSpace/cmake/src/main.c
+stdlib.h
+-
+stdio.h
+-
+../include/a.h
+/home/zilong/WorkSpace/cmake/include/a.h
+
